@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-01T10:50:53.101Z</updated>
+  <updated>2017-06-02T06:36:04.194Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css基础知识（一）</title>
+    <link href="http://yoursite.com/2017/06/02/css%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://yoursite.com/2017/06/02/css基础知识（一）/</id>
+    <published>2017-06-02T06:30:47.000Z</published>
+    <updated>2017-06-02T06:36:04.194Z</updated>
+    
+    <content type="html"><![CDATA[<p>##视觉格式化模型</p>
+<blockquote>
+<p>视觉格式化模型（visual formatting model)是用来处理文档并将其显示在视觉媒体上的机制<br>视觉格式化模型定义了盒（Box）的生成，盒主要包括了块盒、行内盒、匿名盒（没有名字不能被选择器选中的盒）以及一些实验性的盒（未来可能添加到规范中）</p>
+</blockquote>
+<p>##盒（box）</p>
+<ul>
+<li>概念：css布局的基本单位</li>
+<li>解释：box是css布局的基本单位，元素的类型和display属性，决定了这个元素的box类型.</li>
+<li>box的类型分为<ul>
+<li><code>block-level box</code>：<code>display</code>的属性值为<code>block</code> <code>list-item</code> <code>table</code>的元素会生成block-level box，并且参与block formatting context布局.</li>
+<li><code>inline-level box</code>：<code>display</code>的属性值为<code>inline</code> <code>inline-block</code> <code>inline-table</code>的元素会生成inline-level box，并参与inline formatting context布局.</li>
+<li><code>run-in box</code>: css3中新定义的</li>
+</ul>
+</li>
+</ul>
+<p>##Formatting Context</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##视觉格式化模型&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;视觉格式化模型（visual formatting model)是用来处理文档并将其显示在视觉媒体上的机制&lt;br&gt;视觉格式化模型定义了盒（Box）的生成，盒主要包括了块盒、行内盒、匿名盒（没有名字不能被选择器选中的
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo+Github pages</title>
