@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Peyang</title>
+  <title>fabrice</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-02T07:34:54.632Z</updated>
+  <updated>2017-06-02T09:31:39.970Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/06/02/css%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2017/06/02/css基础知识（一）/</id>
     <published>2017-06-02T06:30:47.000Z</published>
-    <updated>2017-06-02T07:34:54.632Z</updated>
+    <updated>2017-06-02T09:31:39.970Z</updated>
     
     <content type="html"><![CDATA[<h2 id="视觉格式化模型"><a href="#视觉格式化模型" class="headerlink" title="视觉格式化模型"></a>视觉格式化模型</h2><blockquote>
 <p>视觉格式化模型（visual formatting model)是用来处理文档并将其显示在视觉媒体上的机制<br>视觉格式化模型定义了盒（Box）的生成，盒主要包括了块盒、行内盒、匿名盒（没有名字不能被选择器选中的盒）以及一些实验性的盒（未来可能添加到规范中）</p>
@@ -54,6 +54,8 @@
     </summary>
     
     
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
   </entry>
   
   <entry>
@@ -61,7 +63,7 @@
     <link href="http://yoursite.com/2017/06/01/hexo-Github-pages/"/>
     <id>http://yoursite.com/2017/06/01/hexo-Github-pages/</id>
     <published>2017-06-01T10:50:24.000Z</published>
-    <updated>2017-06-02T07:54:49.206Z</updated>
+    <updated>2017-06-02T10:10:39.691Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Hexo-Github-pages"><a href="#Hexo-Github-pages" class="headerlink" title="Hexo + Github pages"></a>Hexo + Github pages</h2><blockquote>
 <p>安装hexo</p>
@@ -70,10 +72,9 @@
 <blockquote>
 <p>新增</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ hexo new &quot;postName&quot; #新建文章</div></pre></td></tr></table></figure>
-<p>然后在blog目录下找到source/_posts/postname.md，编辑器（支持markdown的编辑器）打开这个文件<br>默认格式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: hello hexo</div><div class="line">date: 2017-06-01 14:14:38</div><div class="line">tags: html</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">以下就是要写的内容</div></pre></td></tr></table></figure>
-<p> <a href="http://www.appinn.com/markdown/" target="_blank" rel="external">markdown</a>语法书写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;postName&quot; #新建文章</div></pre></td></tr></table></figure>
+<p>然后在blog目录下找到source/_posts/postname.md，编辑器（支持markdown的编辑器）打开这个文件<br>默认格式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: hello hexo</div><div class="line">date: 2017-06-01 14:14:38</div><div class="line">tags:</div><div class="line">---</div><div class="line">内容</div><div class="line">## title</div><div class="line">.....</div></pre></td></tr></table></figure></p>
+<p><a href="http://www.appinn.com/markdown/" target="_blank" rel="external">markdown</a>语法书写</p>
 <blockquote>
 <p>主题安装</p>
 </blockquote>
@@ -110,6 +111,8 @@
     
     </summary>
     
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
     
   </entry>
   
