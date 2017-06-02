@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-02T06:36:04.194Z</updated>
+  <updated>2017-06-02T07:34:54.632Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,16 +20,13 @@
     <link href="http://yoursite.com/2017/06/02/css%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2017/06/02/css基础知识（一）/</id>
     <published>2017-06-02T06:30:47.000Z</published>
-    <updated>2017-06-02T06:36:04.194Z</updated>
+    <updated>2017-06-02T07:34:54.632Z</updated>
     
-    <content type="html"><![CDATA[<p>##视觉格式化模型</p>
-<blockquote>
+    <content type="html"><![CDATA[<h2 id="视觉格式化模型"><a href="#视觉格式化模型" class="headerlink" title="视觉格式化模型"></a>视觉格式化模型</h2><blockquote>
 <p>视觉格式化模型（visual formatting model)是用来处理文档并将其显示在视觉媒体上的机制<br>视觉格式化模型定义了盒（Box）的生成，盒主要包括了块盒、行内盒、匿名盒（没有名字不能被选择器选中的盒）以及一些实验性的盒（未来可能添加到规范中）</p>
 </blockquote>
-<p>##盒（box）</p>
-<ul>
-<li>概念：css布局的基本单位</li>
-<li>解释：box是css布局的基本单位，元素的类型和display属性，决定了这个元素的box类型.</li>
+<h2 id="盒（box）"><a href="#盒（box）" class="headerlink" title="盒（box）"></a>盒（box）</h2><ul>
+<li>box是css布局的基本单位，元素的类型(<code>a</code> <code>div</code>…)和display属性决定了这个元素的box类型.</li>
 <li>box的类型分为<ul>
 <li><code>block-level box</code>：<code>display</code>的属性值为<code>block</code> <code>list-item</code> <code>table</code>的元素会生成block-level box，并且参与block formatting context布局.</li>
 <li><code>inline-level box</code>：<code>display</code>的属性值为<code>inline</code> <code>inline-block</code> <code>inline-table</code>的元素会生成inline-level box，并参与inline formatting context布局.</li>
@@ -37,14 +34,22 @@
 </ul>
 </li>
 </ul>
-<p>##Formatting Context</p>
+<h2 id="Formatting-Context"><a href="#Formatting-Context" class="headerlink" title="Formatting Context"></a>Formatting Context</h2><ul>
+<li>formatting context 是一个决定如何渲染文档的容器</li>
+<li>常见的formatting context：<ul>
+<li>block formatting context (BFC)</li>
+<li>inline formatting context (IFC)</li>
+<li>Grid formatting context (GFC)</li>
+<li>flex formatting context (FFC)</li>
+</ul>
+</li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;##视觉格式化模型&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;视觉格式化模型（visual formatting model)是用来处理文档并将其显示在视觉媒体上的机制&lt;br&gt;视觉格式化模型定义了盒（Box）的生成，盒主要包括了块盒、行内盒、匿名盒（没有名字不能被选择器选中的
+      &lt;h2 id=&quot;视觉格式化模型&quot;&gt;&lt;a href=&quot;#视觉格式化模型&quot; class=&quot;headerlink&quot; title=&quot;视觉格式化模型&quot;&gt;&lt;/a&gt;视觉格式化模型&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;视觉格式化模型（visual formatting model)是用来处理
     
     </summary>
     
@@ -56,50 +61,47 @@
     <link href="http://yoursite.com/2017/06/01/hexo-Github-pages/"/>
     <id>http://yoursite.com/2017/06/01/hexo-Github-pages/</id>
     <published>2017-06-01T10:50:24.000Z</published>
-    <updated>2017-06-01T10:50:53.101Z</updated>
+    <updated>2017-06-02T07:54:49.206Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Hexo-Github-pages"><a href="#Hexo-Github-pages" class="headerlink" title="Hexo + Github pages"></a>Hexo + Github pages</h2><blockquote>
 <p>安装hexo</p>
 </blockquote>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ cd d:/hexo</div><div class="line"><span class="comment">//随便那个建个hexo文件夹</span></div><div class="line">$ npm install hexo-cli -g  </div><div class="line"><span class="comment">//hexo-cli脚手架工作</span></div><div class="line">$ hexo init blog  </div><div class="line"><span class="comment">//初始化blog项目</span></div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line"><span class="comment">//安装相关依赖 有可能全都默认装好了</span></div><div class="line">$ hexo g</div><div class="line"><span class="comment">// 或者hexo generate 生成静态文件 public</span></div><div class="line">$ hexo s</div><div class="line"><span class="comment">// 或者hexo server，可以在http://localhost:4000/ 查看默认效果</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ cd d:/hexo</div><div class="line">//随便那个建个hexo文件夹</div><div class="line">$ npm install hexo-cli -g  </div><div class="line">//hexo-cli脚手架工作</div><div class="line">$ hexo init blog  </div><div class="line">//初始化blog项目</div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line">//安装相关依赖 有可能全都默认装好了</div><div class="line">$ hexo g</div><div class="line">// 或者hexo generate 生成静态文件 public</div><div class="line">$ hexo s</div><div class="line">// 或者hexo server，可以在http://localhost:4000/ 查看默认效果</div></pre></td></tr></table></figure>
 <blockquote>
 <p>新增</p>
 </blockquote>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="comment">#新建文章</span></div></pre></td></tr></table></figure>
-<p>然后在blog目录下找到source/_posts/postname.md<br>编辑器打开这个文件</p>
-<h2 id="默认格式"><a href="#默认格式" class="headerlink" title="默认格式"></a>默认格式</h2><p>title: hello hexo<br>date: 2017-06-01 14:14:38</p>
-<h2 id="tags-html"><a href="#tags-html" class="headerlink" title="tags: html"></a>tags: html</h2><p>以下就是要写的内容（markdown语法书写（百度））</p>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ hexo new &quot;postName&quot; #新建文章</div></pre></td></tr></table></figure>
+<p>然后在blog目录下找到source/_posts/postname.md，编辑器（支持markdown的编辑器）打开这个文件<br>默认格式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: hello hexo</div><div class="line">date: 2017-06-01 14:14:38</div><div class="line">tags: html</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">以下就是要写的内容</div></pre></td></tr></table></figure>
+<p> <a href="http://www.appinn.com/markdown/" target="_blank" rel="external">markdown</a>语法书写</p>
 <blockquote>
 <p>主题安装</p>
 </blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">//这个命令是删掉之前生成的public文件夹</div><div class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div><div class="line">//https://github.com/litten/hexo-theme-yilia.git 主题的仓库地址</div><div class="line">//themes/yilia 在blog目录下以themes/主题名格式生成文件夹</div><div class="line"></div><div class="line">//应用主题去blog根目录下_config.yml文件去理改，下面这个字段</div><div class="line"># Extensions</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: apollo</div><div class="line">//一般不用更新主题，clone过来一般都是最新的，要更新就cd 主题文件</div><div class="line">$ git pull</div><div class="line">//主题的选项和修改，自己看人Github仓库的文档</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">//这个命令是删掉之前生成的public文件夹</div><div class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div><div class="line">//https://github.com/litten/hexo-theme-yilia.git 主题的仓库地址</div><div class="line">//themes/yilia 在blog目录下以themes/主题名格式生成文件夹</div><div class="line"></div><div class="line">//应用主题去blog根目录下_config.yml文件去理改，下面这个字段</div><div class="line"># Extensions</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: apollo</div><div class="line">//一般不用更新主题，clone过来一般都是最新的，要更新就cd 主题文件夹</div><div class="line">$ git pull</div><div class="line">//主题的选项和修改，自己看人Github仓库的文档</div></pre></td></tr></table></figure>
 <blockquote>
 <p>Github pages</p>
 </blockquote>
-<p><img src="https://pic3.zhimg.com/0ddd2851a42f554c118a048eca3c8b32_b.png" alt="enter description here"></p>
-<hr>
-<p><img src="https://pic1.zhimg.com/f1ceb7c4c768a5141083ce09cbf1a340_b.png" alt="enter description here"></p>
-<hr>
-<p>上面就是你的Github账户下创建个仓库，名字必须按格式写</p>
+<p><img src="http://oqwtih17f.bkt.clouddn.com/Githubpages.png" alt="Githubpages"><br><img src="http://oqwtih17f.bkt.clouddn.com/Githubpages1.png" alt="Githubpages"></p>
+<p>上面就是你的Github账户下创建个仓库，名字必须按格式username.github.io写</p>
 <hr>
 <blockquote>
 <p>部署</p>
 </blockquote>
 <p>在_config.yml文件的</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/Pengyang7568/Pengyang7568.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/Pengyang7568/Pengyang7568.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p><strong>repository</strong> 这个是你的仓库地址</p>
 <p>然后在执行</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line"><span class="comment">//部署的插件</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">//部署的插件</div></pre></td></tr></table></figure>
 <p>执行</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-<p><img src="https://pic2.zhimg.com/v2-afc855fbbb24c435dde04ae2bce57711_b.png" alt="正确上传效果就是这样"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+<p><img src="http://oqwtih17f.bkt.clouddn.com/v2-afc855fbbb24c435dde04ae2bce57711_b.png" alt="正确上传效果就是这样"></p>
 <p>  正确上传效果就是上面，最好是下个Github的客服端，没有客服端会在命令行让你输账户，密码，有客服端会弹个窗口输</p>
 <p>  上传成功后，你就可以访问<strong>Pengyang7568.github.io</strong> 前面换成你的用户名就可以</p>
-<p>  每次要写了新文章，就</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line"></div><div class="line">$ hexo new <span class="string">"文章名字"</span></div><div class="line"></div><div class="line">$ hexo g</div><div class="line"></div><div class="line">$ hexo s <span class="comment">//本地看看效果</span></div><div class="line"></div><div class="line">$ hexo d <span class="comment">//部署上去</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>新文章发表</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line"></div><div class="line">$ hexo new &quot;文章名字&quot;</div><div class="line"></div><div class="line">$ hexo g</div><div class="line"></div><div class="line">$ hexo s //本地看看效果</div><div class="line"></div><div class="line">$ hexo d //部署上去</div></pre></td></tr></table></figure>
 <p>然后就访问地址就可以看到了</p>
-<p>还有一些插件，自己去官网研究，比如说评论插件，markdown自己学，很简单或者下个markdown编辑器，写好了复制进去<br>苹果干这些事天生有优势，Git是要装的，你们应该学了撒</p>
 ]]></content>
     
     <summary type="html">
@@ -108,30 +110,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>hello hexo</title>
-    <link href="http://yoursite.com/2017/06/01/hello-hexo/"/>
-    <id>http://yoursite.com/2017/06/01/hello-hexo/</id>
-    <published>2017-06-01T06:14:38.000Z</published>
-    <updated>2017-06-01T09:10:08.772Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="hello-hexo"><a href="#hello-hexo" class="headerlink" title="hello hexo"></a>hello hexo</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'hello hexo'</span>)</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Blockquote</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;hello-hexo&quot;&gt;&lt;a href=&quot;#hello-hexo&quot; class=&quot;headerlink&quot; title=&quot;hello hexo&quot;&gt;&lt;/a&gt;hello hexo&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;tab
-    
-    </summary>
-    
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
