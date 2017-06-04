@@ -95,7 +95,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Github," />
+  <meta name="keywords" content="node.js," />
 
 
 
@@ -111,21 +111,17 @@
 
 
 
-<meta name="description" content="Hexo + Github pages  安装hexo  12345678910111213$ cd d:/hexo//随便那个建个hexo文件夹$ npm install hexo-cli -g  //hexo-cli脚手架工作$ hexo init blog  //初始化blog项目$ cd blog$ npm install//安装相关依赖 有可能全都默认装好了$ hexo g// 或者he">
-<meta name="keywords" content="Github">
+<meta name="description" content="json-server初次使用 在vue-cli脚手架工具中使用json-server,自建测试用的REST API,实现ajax请求的测试    安装json-server  1$ npm i json-server --save --dev   设置dev-server.js  12345678910111213141516//引入json-server模块var jsonServer= re">
+<meta name="keywords" content="node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo+Github pages">
-<meta property="og:url" content="http://yoursite.com/2017/06/01/hexo-Github-pages/index.html">
+<meta property="og:title" content="json-server">
+<meta property="og:url" content="http://yoursite.com/2017/06/04/json-server/index.html">
 <meta property="og:site_name" content="fabrice">
-<meta property="og:description" content="Hexo + Github pages  安装hexo  12345678910111213$ cd d:/hexo//随便那个建个hexo文件夹$ npm install hexo-cli -g  //hexo-cli脚手架工作$ hexo init blog  //初始化blog项目$ cd blog$ npm install//安装相关依赖 有可能全都默认装好了$ hexo g// 或者he">
-<meta property="og:image" content="http://oqwtih17f.bkt.clouddn.com/Githubpages.png">
-<meta property="og:image" content="http://oqwtih17f.bkt.clouddn.com/Githubpages1.png">
-<meta property="og:image" content="http://oqwtih17f.bkt.clouddn.com/v2-afc855fbbb24c435dde04ae2bce57711_b.png">
-<meta property="og:updated_time" content="2017-06-04T13:27:26.850Z">
+<meta property="og:description" content="json-server初次使用 在vue-cli脚手架工具中使用json-server,自建测试用的REST API,实现ajax请求的测试    安装json-server  1$ npm i json-server --save --dev   设置dev-server.js  12345678910111213141516//引入json-server模块var jsonServer= re">
+<meta property="og:updated_time" content="2017-06-04T13:22:28.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo+Github pages">
-<meta name="twitter:description" content="Hexo + Github pages  安装hexo  12345678910111213$ cd d:/hexo//随便那个建个hexo文件夹$ npm install hexo-cli -g  //hexo-cli脚手架工作$ hexo init blog  //初始化blog项目$ cd blog$ npm install//安装相关依赖 有可能全都默认装好了$ hexo g// 或者he">
-<meta name="twitter:image" content="http://oqwtih17f.bkt.clouddn.com/Githubpages.png">
+<meta name="twitter:title" content="json-server">
+<meta name="twitter:description" content="json-server初次使用 在vue-cli脚手架工具中使用json-server,自建测试用的REST API,实现ajax请求的测试    安装json-server  1$ npm i json-server --save --dev   设置dev-server.js  12345678910111213141516//引入json-server模块var jsonServer= re">
 
 
 
@@ -153,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/01/hexo-Github-pages/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/04/json-server/"/>
 
 
 
 
 
-  <title>hexo+Github pages | fabrice</title>
+  <title>json-server | fabrice</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -281,7 +277,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/01/hexo-Github-pages/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/04/json-server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fabrice">
@@ -298,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo+Github pages</h1>
+          <h1 class="post-title" itemprop="name headline">json-server</h1>
         
 
         <div class="post-meta">
@@ -310,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-01T18:50:24+08:00">
-                2017-06-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-04T21:17:45+08:00">
+                2017-06-04
               </time>
             
 
@@ -345,48 +341,34 @@
       
 
       
-        <h2 id="Hexo-Github-pages"><a href="#Hexo-Github-pages" class="headerlink" title="Hexo + Github pages"></a>Hexo + Github pages</h2><hr>
-<blockquote>
-<p>安装hexo</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ cd d:/hexo</div><div class="line">//随便那个建个hexo文件夹</div><div class="line">$ npm install hexo-cli -g  </div><div class="line">//hexo-cli脚手架工作</div><div class="line">$ hexo init blog  </div><div class="line">//初始化blog项目</div><div class="line">$ cd blog</div><div class="line">$ npm install</div><div class="line">//安装相关依赖 有可能全都默认装好了</div><div class="line">$ hexo g</div><div class="line">// 或者hexo generate 生成静态文件 public</div><div class="line">$ hexo s</div><div class="line">// 或者hexo server，可以在http://localhost:4000/ 查看默认效果</div></pre></td></tr></table></figure>
+        <h2 id="json-server初次使用"><a href="#json-server初次使用" class="headerlink" title="json-server初次使用"></a><a href="https://github.com/typicode/json-server" target="_blank" rel="external">json-server</a>初次使用</h2><hr>
+<div class="note success"><p>在vue-cli脚手架工具中使用<strong>json-server</strong>,自建测试用的<strong>REST API</strong>,实现ajax请求的测试</p>
+</div>
 <hr>
 <blockquote>
-<p>新增</p>
+<p>安装json-server</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;postName&quot; #新建文章</div></pre></td></tr></table></figure>
-<p>然后在blog目录下找到source/_posts/postname.md，编辑器（支持markdown的编辑器）打开这个文件<br>默认格式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: hello hexo</div><div class="line">date: 2017-06-01 14:14:38</div><div class="line">tags:</div><div class="line">---</div><div class="line">内容</div><div class="line">## title</div><div class="line">.....</div></pre></td></tr></table></figure></p>
-<p><a href="http://www.appinn.com/markdown/" target="_blank" rel="external">markdown</a>语法书写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i json-server --save --dev</div></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<p>主题安装</p>
+<p>设置dev-server.js</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">//这个命令是删掉之前生成的public文件夹</div><div class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div><div class="line">//https://github.com/litten/hexo-theme-yilia.git 主题的仓库地址</div><div class="line">//themes/yilia 在blog目录下以themes/主题名格式生成文件夹</div><div class="line"></div><div class="line">//应用主题去blog根目录下_config.yml文件去理改，下面这个字段</div><div class="line"># Extensions</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: apollo</div><div class="line">//一般不用更新主题，clone过来一般都是最新的，要更新就cd 主题文件夹</div><div class="line">$ git pull</div><div class="line">//主题的选项和修改，自己看人Github仓库的文档</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//引入json-server模块</div><div class="line">var jsonServer= require(&apos;json-server&apos;)</div><div class="line">//实例化</div><div class="line">const apiServer = jsonServer.create()</div><div class="line">//设置json-server的router为db.json(在当前项目的根目录下创建db.json文件)</div><div class="line">const apiRouter = jsonServer.router(&apos;db.json&apos;)</div><div class="line">//json-server中间件</div><div class="line">const middlewares = jsonServer.defaults()</div><div class="line">//使用所设定的配置</div><div class="line">apiServer.use(middlewares)</div><div class="line">//通过/api/数据接口来请求数据</div><div class="line">apiServer.use(&apos;/api&apos;,apiRouter)</div><div class="line">//json-server监听8081</div><div class="line">apiServer.listen(8081, () =&gt; &#123;</div><div class="line">  console.log(&apos;JSON Server is running&apos;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<p>Github pages</p>
+<p>config/index.js 的代理设置</p>
 </blockquote>
-<hr>
-<p><img src="http://oqwtih17f.bkt.clouddn.com/Githubpages.png" alt="Githubpages"></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://oqwtih17f.bkt.clouddn.com/Githubpages1.png" alt="Githubpages"></h2><p>上面就是你的Github账户下创建个仓库，名字必须按格式username.github.io写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">dev: &#123;</div><div class="line"> //在当前项目的hot-reload服务器下访问/api/getuserData均会跳转到8081端口</div><div class="line"> proxyTable: &#123;</div><div class="line">  &apos;/api/&apos;: &apos;httphttp://localhost:8081/&apos;</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<p>部署</p>
+<p>db.json</p>
 </blockquote>
-<p>  在_config.yml文件的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/Pengyang7568/Pengyang7568.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<p> repository这个是你的仓库地址</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">//部署的插件</div></pre></td></tr></table></figure>
-<p>执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-<p><img src="http://oqwtih17f.bkt.clouddn.com/v2-afc855fbbb24c435dde04ae2bce57711_b.png" alt="正确上传效果就是这样"></p>
-<p>  正确上传效果就是上面，最好是下个Github的客服端，没有客服端会在命令行让你输账户，密码，有客服端会弹个窗口输入，上传成功后，你就可以访问Pengyang7568.github.io前面换成你的用户名就可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//db.json文件按以下格式书写ajax请求所需数据</div><div class="line">&#123;</div><div class="line">  &quot;getNewsList&quot;: [</div><div class="line">    &#123;</div><div class="line">      &quot;title&quot;: &quot;newsone&quot;,</div><div class="line">      &quot;url&quot;: &quot;http://overwatch.com&quot;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      &quot;title&quot;: &quot;newstwo&quot;,</div><div class="line">      &quot;url&quot;: &quot;http://overwatch.com&quot;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      &quot;title&quot;: &quot;newsthree&quot;,</div><div class="line">      &quot;url&quot;: &quot;http://overwatch.com&quot;</div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line"></div><div class="line">  ......</div><div class="line"></div><div class="line">  &quot;api&quot;: data</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<p>新文章发表</p>
+<p>*.vue</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line"></div><div class="line">$ hexo new &quot;文章名字&quot;</div><div class="line"></div><div class="line">$ hexo g</div><div class="line"></div><div class="line">$ hexo s //本地看看效果</div><div class="line"></div><div class="line">$ hexo d //部署上去</div></pre></td></tr></table></figure>
-<p>然后就访问地址就可以看到了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this.$http.get(&apos;api/getNewsList&apos;).then((res) =&gt; &#123; this.newlist= res.data&#125;).catch((err) =&gt;&#123; console.log(err)&#125; )</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -416,7 +398,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Github/" rel="tag"># Github</a>
+            <a href="/tags/node-js/" rel="tag"># node.js</a>
           
         </div>
       
@@ -429,15 +411,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/02/css基础知识（一）/" rel="next" title="css基础知识（一）">
+                <i class="fa fa-chevron-left"></i> css基础知识（一）
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/02/css基础知识（一）/" rel="prev" title="css基础知识（一）">
-                css基础知识（一） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -577,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-Github-pages"><span class="nav-number">1.</span> <span class="nav-text">Hexo + Github pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#json-server初次使用"><span class="nav-number">1.</span> <span class="nav-text">json-server初次使用</span></a></li></ol></div>
             
 
           </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-02T11:09:35.832Z</updated>
+  <updated>2017-06-04T13:22:28.777Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>json-server</title>
+    <link href="http://yoursite.com/2017/06/04/json-server/"/>
+    <id>http://yoursite.com/2017/06/04/json-server/</id>
+    <published>2017-06-04T13:17:45.000Z</published>
+    <updated>2017-06-04T13:22:28.777Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="json-server初次使用"><a href="#json-server初次使用" class="headerlink" title="json-server初次使用"></a><a href="https://github.com/typicode/json-server" target="_blank" rel="external">json-server</a>初次使用</h2><hr>
+<div class="note success"><p>在vue-cli脚手架工具中使用<strong>json-server</strong>,自建测试用的<strong>REST API</strong>,实现ajax请求的测试</p>
+</div>
+<hr>
+<blockquote>
+<p>安装json-server</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i json-server --save --dev</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>设置dev-server.js</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//引入json-server模块</div><div class="line">var jsonServer= require(&apos;json-server&apos;)</div><div class="line">//实例化</div><div class="line">const apiServer = jsonServer.create()</div><div class="line">//设置json-server的router为db.json(在当前项目的根目录下创建db.json文件)</div><div class="line">const apiRouter = jsonServer.router(&apos;db.json&apos;)</div><div class="line">//json-server中间件</div><div class="line">const middlewares = jsonServer.defaults()</div><div class="line">//使用所设定的配置</div><div class="line">apiServer.use(middlewares)</div><div class="line">//通过/api/数据接口来请求数据</div><div class="line">apiServer.use(&apos;/api&apos;,apiRouter)</div><div class="line">//json-server监听8081</div><div class="line">apiServer.listen(8081, () =&gt; &#123;</div><div class="line">  console.log(&apos;JSON Server is running&apos;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>config/index.js 的代理设置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">dev: &#123;</div><div class="line"> //在当前项目的hot-reload服务器下访问/api/getuserData均会跳转到8081端口</div><div class="line"> proxyTable: &#123;</div><div class="line">  &apos;/api/&apos;: &apos;httphttp://localhost:8081/&apos;</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>db.json</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//db.json文件按以下格式书写ajax请求所需数据</div><div class="line">&#123;</div><div class="line">  &quot;getNewsList&quot;: [</div><div class="line">    &#123;</div><div class="line">      &quot;title&quot;: &quot;newsone&quot;,</div><div class="line">      &quot;url&quot;: &quot;http://overwatch.com&quot;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      &quot;title&quot;: &quot;newstwo&quot;,</div><div class="line">      &quot;url&quot;: &quot;http://overwatch.com&quot;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      &quot;title&quot;: &quot;newsthree&quot;,</div><div class="line">      &quot;url&quot;: &quot;http://overwatch.com&quot;</div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line"></div><div class="line">  ......</div><div class="line"></div><div class="line">  &quot;api&quot;: data</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>*.vue</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this.$http.get(&apos;api/getNewsList&apos;).then((res) =&gt; &#123; this.newlist= res.data&#125;).catch((err) =&gt;&#123; console.log(err)&#125; )</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;json-server初次使用&quot;&gt;&lt;a href=&quot;#json-server初次使用&quot; class=&quot;headerlink&quot; title=&quot;json-server初次使用&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/typicode/json
+    
+    </summary>
+    
+    
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>css基础知识（一）</title>
@@ -63,7 +111,7 @@
     <link href="http://yoursite.com/2017/06/01/hexo-Github-pages/"/>
     <id>http://yoursite.com/2017/06/01/hexo-Github-pages/</id>
     <published>2017-06-01T10:50:24.000Z</published>
-    <updated>2017-06-02T11:10:25.262Z</updated>
+    <updated>2017-06-04T13:27:26.850Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Hexo-Github-pages"><a href="#Hexo-Github-pages" class="headerlink" title="Hexo + Github pages"></a>Hexo + Github pages</h2><hr>
 <blockquote>
@@ -83,25 +131,28 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">//这个命令是删掉之前生成的public文件夹</div><div class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div><div class="line">//https://github.com/litten/hexo-theme-yilia.git 主题的仓库地址</div><div class="line">//themes/yilia 在blog目录下以themes/主题名格式生成文件夹</div><div class="line"></div><div class="line">//应用主题去blog根目录下_config.yml文件去理改，下面这个字段</div><div class="line"># Extensions</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: apollo</div><div class="line">//一般不用更新主题，clone过来一般都是最新的，要更新就cd 主题文件夹</div><div class="line">$ git pull</div><div class="line">//主题的选项和修改，自己看人Github仓库的文档</div></pre></td></tr></table></figure>
 <hr>
-<h2 id="gt-Github-pages"><a href="#gt-Github-pages" class="headerlink" title="&gt; Github pages"></a>&gt; Github pages</h2><p><img src="http://oqwtih17f.bkt.clouddn.com/Githubpages.png" alt="Githubpages"></p>
+<blockquote>
+<p>Github pages</p>
+</blockquote>
+<hr>
+<p><img src="http://oqwtih17f.bkt.clouddn.com/Githubpages.png" alt="Githubpages"></p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://oqwtih17f.bkt.clouddn.com/Githubpages1.png" alt="Githubpages"></h2><p>上面就是你的Github账户下创建个仓库，名字必须按格式username.github.io写</p>
 <hr>
 <blockquote>
 <p>部署</p>
 </blockquote>
-<p>在_config.yml文件的</p>
+<p>  在_config.yml文件的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/Pengyang7568/Pengyang7568.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<p><strong>repository</strong> 这个是你的仓库地址</p>
-<p>然后在执行</p>
+<p> repository这个是你的仓库地址</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">//部署的插件</div></pre></td></tr></table></figure>
 <p>执行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+<p><img src="http://oqwtih17f.bkt.clouddn.com/v2-afc855fbbb24c435dde04ae2bce57711_b.png" alt="正确上传效果就是这样"></p>
+<p>  正确上传效果就是上面，最好是下个Github的客服端，没有客服端会在命令行让你输账户，密码，有客服端会弹个窗口输入，上传成功后，你就可以访问Pengyang7568.github.io前面换成你的用户名就可以</p>
 <hr>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="http://oqwtih17f.bkt.clouddn.com/v2-afc855fbbb24c435dde04ae2bce57711_b.png" alt="正确上传效果就是这样"></h2><p>  正确上传效果就是上面，最好是下个Github的客服端，没有客服端会在命令行让你输账户，密码，有客服端会弹个窗口输</p>
-<h2 id="上传成功后，你就可以访问Pengyang7568-github-io-前面换成你的用户名就可以"><a href="#上传成功后，你就可以访问Pengyang7568-github-io-前面换成你的用户名就可以" class="headerlink" title="  上传成功后，你就可以访问Pengyang7568.github.io 前面换成你的用户名就可以"></a>  上传成功后，你就可以访问<strong>Pengyang7568.github.io</strong> 前面换成你的用户名就可以</h2><blockquote>
+<blockquote>
 <p>新文章发表</p>
 </blockquote>
-<hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line"></div><div class="line">$ hexo new &quot;文章名字&quot;</div><div class="line"></div><div class="line">$ hexo g</div><div class="line"></div><div class="line">$ hexo s //本地看看效果</div><div class="line"></div><div class="line">$ hexo d //部署上去</div></pre></td></tr></table></figure>
 <p>然后就访问地址就可以看到了</p>
 ]]></content>
